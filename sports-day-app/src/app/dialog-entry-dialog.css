@@ -1,0 +1,38 @@
+/* Style the dialog background */
+.mat-dialog-container {
+  background-color: #f9f9f9; /* Light background for a clean look */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Style the buttons in the dialog to match the website's blue buttons */
+button.mat-raised-button {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  margin: 5px; /* Add spacing between buttons */
+  text-transform: uppercase; /* Capitalize button text */
+}
+
+/* Hover effect for the dialog buttons */
+button.mat-raised-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow on hover */
+}
+
+/* Error message styling (if any) */
+div[style="color: red; font-size: 14px; padding: 8px;"] {
+  color: #e74c3c; /* Red color for error */
+  font-size: 14px;
+  padding: 8px;
+  border: 1px solid #e74c3c; /* Border to make error message stand out */
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Add some spacing and padding to the content in the dialog */
+.mat-dialog-content {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+}

@@ -1,0 +1,215 @@
+<router-outlet>
+  <title>CS Sports Day 2025</title>
+  <h2>CS Sports Day 2025</h2>
+  <mat-tab-group>
+    <mat-tab label="Match-Ups">
+      <mat-card appearance="outlined" class="mat-card-container">
+        <mat-card-content>
+          <h3>First Round</h3>
+          <mat-list>
+            <mat-list-item>
+              <p style="text-align:left">
+                Basketball: CoCHI vs TAP
+                <span style="float:right">
+                  <button mat-raised-button (click)="openDialog('CoCHI', 'TAP', 0)"
+                  [disabled]="matches[0] !== '0-0'">{{matches[0]}}</button>
+                </span>
+              </p>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+              <p style="text-align:left">
+                Floorball: UBI vs Complexity
+                <span style="float:right">
+                  <button mat-raised-button (click)="openDialog('UBI', 'Complexity', 1)"
+                  [disabled]="matches[1] !== '0-0'">{{matches[1]}}</button>
+                </span>
+              </p>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+              <p style="text-align:left">
+                Viking Chess: LogSem vs DB
+                <span style="float:right">
+                  <button mat-raised-button (click)="openDialog('LogSem', 'DB', 2)"
+                  [disabled]="matches[2] !== '0-0'">{{matches[2]}}</button>
+                </span>
+              </p>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+              <p style="text-align:left">
+                Running Chess: Algo vs Crypto
+                <span style="float:right">
+                  <button mat-raised-button (click)="openDialog('Algo', 'Crypto', 3)"
+                  [disabled]="matches[3] !== '0-0'">{{matches[3]}}</button>
+                </span>
+              </p>
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+      <mat-card appearance="outlined" class="mat-card-container">
+        <mat-card-content>
+          <h3>Second Round</h3>
+          <mat-list>
+            <mat-list-item>
+              <p style="text-align:left">
+                Basketball: UBI vs LogSem
+                <span style="float:right">
+                  <button mat-raised-button (click)="openDialog('UBI', 'LogSem', 4)"
+                  [disabled]="matches[4] !== '0-0'">{{matches[4]}}</button>
+                </span>
+              </p>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+              <p style="text-align:left">
+                Floorball: Crypto vs CoCHI
+                <span style="float:right">
+                  <button mat-raised-button (click)="openDialog('Crypto', 'CoCHI', 5)"
+                  [disabled]="matches[5] !== '0-0'">{{matches[5]}}</button>
+                </span>
+              </p>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+              <p style="text-align:left">
+                Viking Chess: Algo vs TAP
+                <span style="float:right">
+                  <button mat-raised-button (click)="openDialog('Algo', 'TAP', 6)"
+                  [disabled]="matches[6] !== '0-0'">{{matches[6]}}</button>
+                </span>
+              </p>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+              <p style="text-align:left">
+                Running Chess: Complexity vs DB
+                <span style="float:right">
+                  <button mat-raised-button (click)="openDialog('Complexity', 'DB', 7)"
+                  [disabled]="matches[7] !== '0-0'">{{matches[7]}}</button>
+                </span>
+              </p>
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+      <mat-card appearance="outlined" class="mat-card-container">
+        <mat-card-content>
+          <h3>Third Round</h3>
+          <mat-list>
+            <mat-list-item>
+              <p style="text-align:left">
+                Basketball: Algo vs Complexity
+                <span style="float:right">
+                  <button mat-raised-button (click)="openDialog('Algo', 'Complexity', 8)"
+                  [disabled]="matches[8] !== '0-0'">{{matches[8]}}</button>
+                </span>
+              </p>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+              <p style="text-align:left">
+                Floorball: TAP vs DB
+                <span style="float:right">
+                  <button mat-raised-button (click)="openDialog('TAP', 'DB', 9)"
+                  [disabled]="matches[9] !== '0-0'">{{matches[9]}}</button>
+                </span>
+              </p>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+              <p style="text-align:left">
+                Viking Chess: UBI vs Crypto
+                <span style="float:right">
+                  <button mat-raised-button (click)="openDialog('UBI', 'Crypto', 10)"
+                  [disabled]="matches[10] !== '0-0'">{{matches[10]}}</button>
+                </span>
+              </p>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+              <p style="text-align:left">
+                Running Chess: LogSem vs CoCHI
+                <span style="float:right">
+                  <button mat-raised-button (click)="openDialog('LogSem', 'CoCHI', 11)"
+                  [disabled]="matches[11] !== '0-0'">{{matches[11]}}</button>
+                </span>
+              </p>
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+      <mat-card appearance="outlined" class="mat-card-container">
+        <mat-card-content>
+          <h3>Fourth Round</h3>
+          <mat-list>
+            <mat-list-item>
+              <p style="text-align:left">
+                Basketball: Crypto vs DB
+                <span style="float:right">
+                  <button mat-raised-button (click)="openDialog('Crypto', 'DB',12)"
+                  [disabled]="matches[12] !== '0-0'">{{matches[12]}}</button>
+                </span>
+              </p>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+              <p style="text-align:left">
+                Floorball: Algo vs LogSem
+                <span style="float:right">
+                  <button mat-raised-button (click)="openDialog('Algo', 'LogSem', 13)"
+                  [disabled]="matches[13] !== '0-0'">{{matches[13]}}</button>
+                </span>
+              </p>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+              <p style="text-align:left">
+                Viking Chess: CoCHI vs Complexity
+                <span style="float:right">
+                  <button mat-raised-button (click)="openDialog('CoCHI', 'Complexity', 14)"
+                  [disabled]="matches[14] !== '0-0'">{{matches[14]}}</button>
+                </span>
+              </p>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+              <p style="text-align:left">
+                Running Chess: UBI vs TAP
+                <span style="float:right">
+                  <button mat-raised-button (click)="openDialog('UBI', 'TAP', 15)"
+                  [disabled]="matches[15] !== '0-0'">{{matches[15]}}</button>
+                </span>
+              </p>
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </mat-tab>
+
+    <mat-tab label="Table">
+      <table mat-table [dataSource]="tableDataSource">
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef> Position </th>
+          <td mat-cell *matCellDef="let team"> {{team.position}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let team"> {{team.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="points">
+          <th mat-header-cell *matHeaderCellDef> Points </th>
+          <td mat-cell *matCellDef="let team"> {{team.points}} </td>
+        </ng-container>
+        
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </mat-tab>
+  </mat-tab-group>
+</router-outlet>
