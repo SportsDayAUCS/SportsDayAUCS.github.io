@@ -1,0 +1,44 @@
+name: deploy
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  skip_trivial:
+    name: 'Skip Build and Deploy?'
+    continue-on-error: false
+    runs-on: ubuntu-latest
+
+    steps:
+      - id: skip_check
+        uses: fkirc/skip-duplicate-actions@master
+        with:
+          paths: '["sports-day-app/**"]'
+
+  build:
+    name: 'Build and Deploy'
+    runs-on: ubuntu-latest
+
+    needs: [skip_trivial]
+    if: ${{ needs.skip_trivial.outputs.should_skip != 'true' }}
+
+    steps:
+    # Git repo set up
+    - name: Checkout commit
+      uses: actions/checkout@v2
+      with:
+        submodules: 'recursive'
+
+    # Make
+    - name: Make build
+      working-directory: ${{github.workspace}}
+      run: make
+
+    # Deploy on GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: gh-pages
+        folder: ${{github.workspace}}/build/
