@@ -6,7 +6,7 @@
 }
 
 /* Style the buttons in the dialog to match the website's blue buttons */
-button.mat-raised-button {
+button {
   background-color: #007bff; /* Blue background */
   color: white; /* White text */
   border-radius: 5px; /* Rounded corners */

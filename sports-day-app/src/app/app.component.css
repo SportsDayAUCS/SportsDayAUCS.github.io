@@ -99,14 +99,23 @@ mat-form-field {
     padding: 12px;
   }
 
+  .mat-list-item {
+    padding: 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-right: 12px;
+  }
+
   mat-list-item p {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
+    margin: 2px;
+    margin-top: 5px;
   }
 
   mat-list-item p span {
-    margin-top: 8px;
     align-self: flex-end;
+    margin-right: 10px;
   }
 
   button[mat-raised-button] {
