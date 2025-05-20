@@ -34,7 +34,7 @@ jobs:
     # Make
     - name: Make build
       working-directory: ${{github.workspace}}
-      run: build
+      run: make
 
     # Deploy on GitHub Pages
     - name: Deploy to GitHub Pages
